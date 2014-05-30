@@ -3,6 +3,7 @@ Import PlayerClass
 Import EnemyClass
 Import ShotClass
 Import PointerClass
+Import VectorClass
 
 Const FLOOR_Y:Int = 440
 Const GRAVITY:Int = 1
@@ -25,6 +26,8 @@ Class GameApp Extends App
   Field shotImg:Image
   Field pointerImg:Image
   
+  Field playerCenter:Vector
+  
   Field SFX_main_music:Sound
  
   Method OnCreate()
@@ -40,21 +43,24 @@ Class GameApp Extends App
 	shots = New List<Shot>()
 	pointer = New Pointer(pointerImg)
 	
+	playerCenter = New Vector()
+	
 	SFX_main_music = LoadSound("FromHere.ogg")
 	PlaySound(SFX_main_music, 0)
   End
  
   Method OnUpdate()
-  	CheckCollisions() '???
+  	CheckCollisions(player, enemies, shots) '???
   
+	' --- PLAYER MOVEMENT ---
   	If CollidingBelow(player)
-	  player.y = FLOOR_Y - PLAYER_HEIGHT
+	  player.position.Y = FLOOR_Y - PLAYER_HEIGHT
 	  
 	  If KeyDown(KEY_UP)
 	  	player.Jump()
 	  End
 	Else
-	  player.y += GRAVITY
+	  player.position.Y += GRAVITY
 	End
 	
 	If player.isJumping
@@ -62,19 +68,23 @@ Class GameApp Extends App
 	EndIf
 	
 	If KeyDown(KEY_LEFT)
-	  player.x -= LATERAL_PLAYER_VELOCITY
+	  player.position.X -= LATERAL_PLAYER_VELOCITY
 	EndIf
 	If KeyDown(KEY_RIGHT)
-	  player.x += LATERAL_PLAYER_VELOCITY
+	  player.position.X += LATERAL_PLAYER_VELOCITY
 	EndIf
+	' -----------------------
 	
 	Enemy.RandomEnemySpawn(enemies, enemyImg)
+	
+	playerCenter.X = player.image.Width / 2
+	playerCenter.Y = player.image.Height / 2
 	
 	If MouseHit(MOUSE_LEFT)
 	  'create shot
 	  Local shotFinalPositionX:Float = MouseX
 	  Local shotFinalPositionY:Float = MouseY
-	  shots.AddLast(New Shot(shotImg, player.x + player.image.Width / 2, player.y + player.image.Height / 2,
+	  shots.AddLast(New Shot(shotImg, player.position.X + playerCenter.X, player.position.Y + playerCenter.Y,
 	  						shotFinalPositionX, shotFinalPositionY))
 	End
 
@@ -82,7 +92,7 @@ Class GameApp Extends App
 	  shot.Update()
 	Next
 	
-	pointer.Update(player.x + player.image.Width / 2, player.y + player.image.Height / 2, MouseX, MouseY)
+	pointer.Update(player.position.X + playerCenter.X, player.position.Y + playerCenter.Y, MouseX, MouseY)
   End
  
   Method OnRender()
@@ -102,15 +112,19 @@ Class GameApp Extends App
 	pointer.Draw()
   End
   
-  Method CheckCollisions()
-  	For Local shot:= EachIn shots
-	  'TODO
+  Method CheckCollisions(player:Player1, enemies:List<Enemy>, shots:List<Shot>)
+  	For Local enemy:= EachIn enemies
+	  For Local shot:= EachIn shots
+	  	
+	  Next
+	  
+	  'TODO player collision
 	Next
   End
 End
 
 Function CollidingBelow:Bool(obj:Player1)
-	If obj.y + PLAYER_HEIGHT >= FLOOR_Y
+	If obj.position.Y + PLAYER_HEIGHT >= FLOOR_Y
 		obj.isJumping = False
 		Return True
 	Else

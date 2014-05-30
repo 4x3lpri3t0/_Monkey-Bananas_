@@ -2,7 +2,7 @@ Import mojo
 
 Class Enemy
   Field x:Float, y:Float
-  Field image:Image
+  Public Field image:Image
   
   Method New(img:Image)
     Self.image = img

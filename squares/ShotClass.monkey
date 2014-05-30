@@ -3,7 +3,7 @@ Import VectorClass
 
 Class Shot
   Field position:Vector, mousePos:Vector, direction:Vector, speed:Float = 5
-  Field image:Image
+  Public Field image:Image
   
   Method New(img:Image, initialPosX, initialPosY, mousePosX, mousePosY)
     image = img
