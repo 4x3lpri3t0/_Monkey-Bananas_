@@ -113,8 +113,8 @@ Class GameApp Extends App
   End
   
   Method CheckCollisions(player:Player1, enemies:List<Enemy>, shots:List<Shot>)
-  	For Local enemy:= EachIn enemies
-	  For Local shot:= EachIn shots
+  	For Local enemy:Enemy = EachIn enemies
+	  For Local shot:Shot = EachIn shots
 	  	
 	  Next
 	  

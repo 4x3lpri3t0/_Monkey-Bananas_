@@ -1,18 +1,17 @@
 Import mojo
+Import VectorClass
 
 Class Enemy
-  Field x:Float, y:Float
+  Field position:Vector
   Public Field image:Image
   
   Method New(img:Image)
-    Self.image = img
-	
-    Self.x = Rnd(0, 640)
-    Self.y = Rnd(0, 480)
+    image = img
+	position = New Vector(Rnd(0, 640), Rnd(480))
   End
  
   Method Draw:Void()
-    DrawImage(image, x, y)
+    DrawImage(image, position.X, position.Y)
   End
   
   'STATIC METHOD

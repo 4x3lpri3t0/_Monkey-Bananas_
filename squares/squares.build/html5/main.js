@@ -2924,41 +2924,38 @@ c_Vector.prototype.p_Add=function(t_vector){
 function c_Enemy(){
 	Object.call(this);
 	this.m_image=null;
-	this.m_x=.0;
-	this.m_y=.0;
+	this.m_position=null;
 }
 c_Enemy.m_new=function(t_img){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<8>";
-	dbg_object(this).m_image=t_img;
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<9>";
+	this.m_image=t_img;
 	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<10>";
-	dbg_object(this).m_x=bb_random_Rnd2(0.0,640.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<11>";
-	dbg_object(this).m_y=bb_random_Rnd2(0.0,480.0);
+	this.m_position=c_Vector.m_new.call(new c_Vector,bb_random_Rnd2(0.0,640.0),bb_random_Rnd3(480.0));
 	pop_err();
 	return this;
 }
 c_Enemy.m_new2=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<3>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<4>";
 	pop_err();
 	return this;
 }
 c_Enemy.m_RandomEnemySpawn=function(t_enemies,t_img){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<20>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<19>";
 	var t_rndm=((bb_random_Rnd2(0.0,100.0))|0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<21>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<20>";
 	if(t_rndm==1){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<22>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<21>";
 		t_enemies.p_AddLast(c_Enemy.m_new.call(new c_Enemy,t_img));
 	}
 	pop_err();
 }
 c_Enemy.prototype.p_Draw=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<15>";
-	bb_graphics_DrawImage(this.m_image,this.m_x,this.m_y,0);
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<14>";
+	bb_graphics_DrawImage(this.m_image,dbg_object(this.m_position).m_X,dbg_object(this.m_position).m_Y,0);
 	pop_err();
 }
 function c_List(){

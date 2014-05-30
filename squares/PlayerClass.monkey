@@ -2,10 +2,7 @@ Import mojo
 Import VectorClass
 
 Class Player1
-'  Field x:Float, y:Float
-  
   Field position:Vector = New Vector()
-  
   Field image:Image
   Const JUMP_ACCELERATION:Int = 5
   Field yInitialVelocity:Int = 50
