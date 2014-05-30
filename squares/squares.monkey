@@ -29,6 +29,8 @@ Class GameApp Extends App
   Field playerCenter:Vector
   
   Field SFX_main_music:Sound
+  
+  Field playerScore:Int
  
   Method OnCreate()
     SetUpdateRate(60)
@@ -44,6 +46,8 @@ Class GameApp Extends App
 	pointer = New Pointer(pointerImg)
 	
 	playerCenter = New Vector()
+	
+	playerScore = 0
 	
 	SFX_main_music = LoadSound("FromHere.ogg")
 	PlaySound(SFX_main_music, 0)
@@ -125,6 +129,10 @@ Class GameApp Extends App
 		   shot.position.Y +shot.shotCenter.Y < enemy.position.Y + enemy.image.Height Then 'DOWN COLLISION
 		  shots.Remove(shot)
 		  enemies.Remove(enemy)
+		  
+		  'TODO: Move to TextBox or similar
+		  playerScore += 10
+		  Print("Player score: " + playerScore)
 		EndIf
 	  Next
 	  
