@@ -87,6 +87,10 @@ Class GameApp Extends App
 	  shots.AddLast(New Shot(shotImg, player.position.X + playerCenter.X, player.position.Y + playerCenter.Y,
 	  						shotFinalPositionX, shotFinalPositionY))
 	End
+	
+	For Local enemy:= EachIn enemies
+	  enemy.Update()
+	Next
 
 	For Local shot:= EachIn shots
 	  shot.Update()
@@ -115,7 +119,13 @@ Class GameApp Extends App
   Method CheckCollisions(player:Player1, enemies:List<Enemy>, shots:List<Shot>)
   	For Local enemy:Enemy = EachIn enemies
 	  For Local shot:Shot = EachIn shots
-	  	
+		If shot.position.X + shot.shotCenter.X > enemy.position.X And 'LEFT COLLISION
+		   shot.position.X +shot.shotCenter.X < enemy.position.X + enemy.image.Width And 'RIGHT COLLISION
+		   shot.position.Y +shot.shotCenter.Y > enemy.position.Y And 'UP COLLISION
+		   shot.position.Y +shot.shotCenter.Y < enemy.position.Y + enemy.image.Height Then 'DOWN COLLISION
+		  shots.Remove(shot)
+		  enemies.Remove(enemy)
+		EndIf
 	  Next
 	  
 	  'TODO player collision

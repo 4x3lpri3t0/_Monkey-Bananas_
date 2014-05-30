@@ -3,11 +3,19 @@ Import VectorClass
 
 Class Enemy
   Field position:Vector
-  Public Field image:Image
+  Field image:Image
+  Field enemyCenter:Vector = New Vector()
   
   Method New(img:Image)
     image = img
 	position = New Vector(Rnd(0, 640), Rnd(480))
+  End
+  
+  Method Update:Void()
+	'TODO: Follow player
+	
+	enemyCenter.X = image.Width / 2
+	enemyCenter.Y = image.Height / 2
   End
  
   Method Draw:Void()

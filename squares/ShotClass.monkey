@@ -3,7 +3,8 @@ Import VectorClass
 
 Class Shot
   Field position:Vector, mousePos:Vector, direction:Vector, speed:Float = 5
-  Public Field image:Image
+  Field image:Image
+  Field shotCenter:Vector = New Vector()
   
   Method New(img:Image, initialPosX, initialPosY, mousePosX, mousePosY)
     image = img
@@ -17,6 +18,9 @@ Class Shot
   
   Method Update:Void()
 	position.Add(direction)
+	
+	shotCenter.X = image.Width / 2
+	shotCenter.Y = image.Height / 2
   End
  
   Method Draw:Void()
