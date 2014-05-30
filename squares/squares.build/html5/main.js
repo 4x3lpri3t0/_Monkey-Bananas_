@@ -1735,47 +1735,47 @@ function c_GameApp(){
 c_GameApp.prototype=extend_class(c_App);
 c_GameApp.m_new=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<17>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<17>";
 	c_App.m_new.call(this);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<17>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<17>";
 	pop_err();
 	return this;
 }
 c_GameApp.prototype.p_OnCreate=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<31>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<31>";
 	bb_app_SetUpdateRate(60);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<33>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<33>";
 	this.m_playerImg=bb_graphics_LoadImage("player.png",1,c_Image.m_DefaultFlags);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<34>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<34>";
 	this.m_enemyImg=bb_graphics_LoadImage("enemy.png",1,c_Image.m_DefaultFlags);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<35>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<35>";
 	this.m_shotImg=bb_graphics_LoadImage("shot.png",1,c_Image.m_DefaultFlags);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<36>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<36>";
 	this.m_pointerImg=bb_graphics_LoadImage("pointer.png",1,c_Image.m_DefaultFlags);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<38>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<38>";
 	this.m_player=c_Player1.m_new.call(new c_Player1,this.m_playerImg,10.0,390.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<39>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<39>";
 	this.m_enemies=c_List.m_new.call(new c_List);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<40>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<40>";
 	this.m_shots=c_List2.m_new.call(new c_List2);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<41>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<41>";
 	this.m_pointer=c_Pointer.m_new.call(new c_Pointer,this.m_pointerImg);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<43>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<43>";
 	this.m_SFX_main_music=bb_audio_LoadSound("FromHere.ogg");
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<44>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<44>";
 	bb_audio_PlaySound(this.m_SFX_main_music,0,0);
 	pop_err();
 	return 0;
 }
 c_GameApp.prototype.p_CheckCollisions=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<106>";
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<106>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<106>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<106>";
 	var t_=this.m_shots.p_ObjectEnumerator();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<106>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<106>";
 	while(t_.p_HasNext()){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<106>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<106>";
 		var t_shot=t_.p_NextObject();
 	}
 	pop_err();
@@ -1783,93 +1783,93 @@ c_GameApp.prototype.p_CheckCollisions=function(){
 }
 c_GameApp.prototype.p_OnUpdate=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<48>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<48>";
 	this.p_CheckCollisions();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<50>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<50>";
 	if(bb_squares_CollidingBelow(this.m_player)){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<51>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<51>";
 		dbg_object(this.m_player).m_y=408.0;
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<53>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<53>";
 		if((bb_input_KeyDown(38))!=0){
-			err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<54>";
+			err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<54>";
 			this.m_player.p_Jump();
 		}
 	}else{
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<57>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<57>";
 		dbg_object(this.m_player).m_y=dbg_object(this.m_player).m_y+1.0;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<60>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<60>";
 	if(dbg_object(this.m_player).m_isJumping){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<61>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<61>";
 		this.m_player.p_Jumping();
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<64>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<64>";
 	if((bb_input_KeyDown(37))!=0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<65>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<65>";
 		dbg_object(this.m_player).m_x=dbg_object(this.m_player).m_x-7.0;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<67>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<67>";
 	if((bb_input_KeyDown(39))!=0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<68>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<68>";
 		dbg_object(this.m_player).m_x=dbg_object(this.m_player).m_x+7.0;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<71>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<71>";
 	c_Enemy.m_RandomEnemySpawn(this.m_enemies,this.m_enemyImg);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<73>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<73>";
 	if((bb_input_MouseHit(0))!=0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<75>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<75>";
 		var t_shotFinalPositionX=bb_input_MouseX();
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<76>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<76>";
 		var t_shotFinalPositionY=bb_input_MouseY();
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<78>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<78>";
 		this.m_shots.p_AddLast2(c_Shot.m_new.call(new c_Shot,this.m_shotImg,((dbg_object(this.m_player).m_x+((dbg_object(this.m_player).m_image.p_Width()/2)|0))|0),((dbg_object(this.m_player).m_y+((dbg_object(this.m_player).m_image.p_Height()/2)|0))|0),((t_shotFinalPositionX)|0),((t_shotFinalPositionY)|0)));
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<81>";
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<81>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<81>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<81>";
 	var t_=this.m_shots.p_ObjectEnumerator();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<81>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<81>";
 	while(t_.p_HasNext()){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<81>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<81>";
 		var t_shot=t_.p_NextObject();
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<82>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<82>";
 		t_shot.p_Update();
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<85>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<85>";
 	this.m_pointer.p_Update2(dbg_object(this.m_player).m_x+((dbg_object(this.m_player).m_image.p_Width()/2)|0),dbg_object(this.m_player).m_y+((dbg_object(this.m_player).m_image.p_Height()/2)|0),((bb_input_MouseX())|0),((bb_input_MouseY())|0));
 	pop_err();
 	return 0;
 }
 c_GameApp.prototype.p_OnRender=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<89>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<89>";
 	bb_graphics_Cls(0.0,0.0,0.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<91>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<91>";
 	this.m_player.p_Draw();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<92>";
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<92>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<92>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<92>";
 	var t_=this.m_enemies.p_ObjectEnumerator();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<92>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<92>";
 	while(t_.p_HasNext()){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<92>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<92>";
 		var t_enemy=t_.p_NextObject();
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<93>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<93>";
 		t_enemy.p_Draw();
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<95>";
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<95>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<95>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<95>";
 	var t_2=this.m_shots.p_ObjectEnumerator();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<95>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<95>";
 	while(t_2.p_HasNext()){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<95>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<95>";
 		var t_shot=t_2.p_NextObject();
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<96>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<96>";
 		t_shot.p_Draw();
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<99>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<99>";
 	bb_graphics_SetColor(32.0,64.0,128.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<100>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<100>";
 	bb_graphics_DrawRect(0.0,440.0,640.0,40.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<102>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<102>";
 	this.m_pointer.p_Draw();
 	pop_err();
 	return 0;
@@ -2012,7 +2012,7 @@ var bb_app__delegate=null;
 var bb_app__game=null;
 function bbMain(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<14>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<14>";
 	c_GameApp.m_new.call(new c_GameApp);
 	pop_err();
 	return 0;
@@ -2769,42 +2769,42 @@ function c_Player1(){
 }
 c_Player1.m_new=function(t_img,t_x,t_y){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<12>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<12>";
 	dbg_object(this).m_image=t_img;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<13>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<13>";
 	dbg_object(this).m_x=t_x;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<14>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<14>";
 	dbg_object(this).m_y=t_y;
 	pop_err();
 	return this;
 }
 c_Player1.m_new2=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<3>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<3>";
 	pop_err();
 	return this;
 }
 c_Player1.prototype.p_Jumping=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<29>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<29>";
 	this.m_yVelocity-=5;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<30>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<30>";
 	dbg_object(this).m_y=dbg_object(this).m_y-(this.m_yVelocity);
 	pop_err();
 }
 c_Player1.prototype.p_Jump=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<22>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<22>";
 	this.m_yVelocity=this.m_yInitialVelocity;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<23>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<23>";
 	this.m_isJumping=true;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<25>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<25>";
 	this.p_Jumping();
 	pop_err();
 }
 c_Player1.prototype.p_Draw=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PlayerClass.monkey<18>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PlayerClass.monkey<18>";
 	bb_graphics_DrawImage(this.m_image,this.m_x,this.m_y,0);
 	pop_err();
 }
@@ -2816,35 +2816,35 @@ function c_Enemy(){
 }
 c_Enemy.m_new=function(t_img){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<8>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<8>";
 	dbg_object(this).m_image=t_img;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<10>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<10>";
 	dbg_object(this).m_x=bb_random_Rnd2(0.0,640.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<11>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<11>";
 	dbg_object(this).m_y=bb_random_Rnd2(0.0,480.0);
 	pop_err();
 	return this;
 }
 c_Enemy.m_new2=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<3>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<3>";
 	pop_err();
 	return this;
 }
 c_Enemy.m_RandomEnemySpawn=function(t_enemies,t_img){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<20>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<20>";
 	var t_rndm=((bb_random_Rnd2(0.0,100.0))|0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<21>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<21>";
 	if(t_rndm==1){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<22>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<22>";
 		t_enemies.p_AddLast(c_Enemy.m_new.call(new c_Enemy,t_img));
 	}
 	pop_err();
 }
 c_Enemy.prototype.p_Draw=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/EnemyClass.monkey<15>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/EnemyClass.monkey<15>";
 	bb_graphics_DrawImage(this.m_image,this.m_x,this.m_y,0);
 	pop_err();
 }
@@ -2941,32 +2941,32 @@ function c_Shot(){
 }
 c_Shot.m_new=function(t_img,t_initialPosX,t_initialPosY,t_mousePosX,t_mousePosY){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<9>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<9>";
 	this.m_image=t_img;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<11>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<11>";
 	this.m_position=c_Vector.m_new.call(new c_Vector,(t_initialPosX),(t_initialPosY));
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<13>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<13>";
 	this.m_direction=c_Vector.m_new.call(new c_Vector,(t_mousePosX-t_initialPosX),(t_mousePosY-t_initialPosY));
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<15>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<15>";
 	this.m_direction=this.m_direction.p_Normalize().p_Multiply(this.m_speed);
 	pop_err();
 	return this;
 }
 c_Shot.m_new2=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<4>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<4>";
 	pop_err();
 	return this;
 }
 c_Shot.prototype.p_Update=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<19>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<19>";
 	this.m_position.p_Add(this.m_direction);
 	pop_err();
 }
 c_Shot.prototype.p_Draw=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/ShotClass.monkey<23>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/ShotClass.monkey<23>";
 	bb_graphics_DrawImage(this.m_image,dbg_object(this.m_position).m_X,dbg_object(this.m_position).m_Y,0);
 	pop_err();
 }
@@ -3062,32 +3062,32 @@ function c_Pointer(){
 }
 c_Pointer.m_new=function(t_img){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<9>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<9>";
 	this.m_image=t_img;
 	pop_err();
 	return this;
 }
 c_Pointer.m_new2=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<4>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<4>";
 	pop_err();
 	return this;
 }
 c_Pointer.prototype.p_Update2=function(t_initialPosX,t_initialPosY,t_mousePosX,t_mousePosY){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<13>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<13>";
 	this.m_position=c_Vector.m_new.call(new c_Vector,t_initialPosX,t_initialPosY);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<15>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<15>";
 	this.m_direction=c_Vector.m_new.call(new c_Vector,(t_mousePosX)-t_initialPosX,(t_mousePosY)-t_initialPosY);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<17>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<17>";
 	this.m_direction=this.m_direction.p_Normalize().p_Multiply(50.0);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<19>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<19>";
 	this.m_position.p_Add(this.m_direction);
 	pop_err();
 }
 c_Pointer.prototype.p_Draw=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/PointerClass.monkey<23>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/PointerClass.monkey<23>";
 	bb_graphics_DrawImage(this.m_image,dbg_object(this.m_position).m_X-((this.m_image.p_Width()/2)|0),dbg_object(this.m_position).m_Y-((this.m_image.p_Height()/2)|0),0);
 	pop_err();
 }
@@ -3177,15 +3177,15 @@ c_Enumerator.prototype.p_NextObject=function(){
 }
 function bb_squares_CollidingBelow(t_obj){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<113>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<113>";
 	if(dbg_object(t_obj).m_y+32.0>=440.0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<114>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<114>";
 		dbg_object(t_obj).m_isJumping=false;
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<115>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<115>";
 		pop_err();
 		return true;
 	}else{
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/squares.monkey<117>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/squares.monkey<117>";
 		pop_err();
 		return false;
 	}
@@ -3249,95 +3249,95 @@ function c_Vector(){
 }
 c_Vector.m_new=function(t_x,t_y){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<22>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<22>";
 	this.m_X=t_x;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<23>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<23>";
 	this.m_Y=t_y;
 	pop_err();
 	return this;
 }
 c_Vector.prototype.p_Length=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<152>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<152>";
 	var t_=Math.sqrt(this.m_X*this.m_X+this.m_Y*this.m_Y);
 	pop_err();
 	return t_;
 }
 c_Vector.prototype.p_Multiply=function(t_Value){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<67>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<67>";
 	this.m_X*=t_Value;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<68>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<68>";
 	this.m_Y*=t_Value;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<69>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<69>";
 	pop_err();
 	return this;
 }
 c_Vector.prototype.p_Length2=function(t_length){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<159>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<159>";
 	if(t_length==0.0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<160>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<160>";
 		this.m_X=0.0;
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<161>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<161>";
 		this.m_Y=0.0;
 		pop_err();
 		return;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<165>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<165>";
 	if(this.m_X==0.0 && this.m_Y==0.0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<166>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<166>";
 		this.m_X=t_length;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<169>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<169>";
 	this.p_Normalize();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<170>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<170>";
 	this.p_Multiply(t_length);
 	pop_err();
 }
 c_Vector.prototype.p_Set=function(t_vector){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<29>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<29>";
 	this.m_X=dbg_object(t_vector).m_X;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<30>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<30>";
 	this.m_Y=dbg_object(t_vector).m_Y;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<31>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<31>";
 	pop_err();
 	return this;
 }
 c_Vector.prototype.p_Set2=function(t_x,t_y){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<34>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<34>";
 	this.m_X=t_x;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<35>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<35>";
 	this.m_Y=t_y;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<36>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<36>";
 	pop_err();
 	return this;
 }
 c_Vector.prototype.p_Normalize=function(){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<137>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<137>";
 	var t_Length=this.p_Length();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<138>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<138>";
 	if(t_Length==0.0){
-		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<139>";
+		err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<139>";
 		pop_err();
 		return this;
 	}
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<144>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<144>";
 	this.p_Set2(this.m_X/t_Length,this.m_Y/t_Length);
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<145>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<145>";
 	pop_err();
 	return this;
 }
 c_Vector.prototype.p_Add=function(t_vector){
 	push_err();
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<42>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<42>";
 	this.m_X+=dbg_object(t_vector).m_X;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<43>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<43>";
 	this.m_Y+=dbg_object(t_vector).m_Y;
-	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey Bananas_/squares/VectorClass.monkey<44>";
+	err_info="C:/Users/aprieto.VMBCORP/Dropbox/PROJECTS/_Monkey-Bananas_/squares/VectorClass.monkey<44>";
 	pop_err();
 	return this;
 }
